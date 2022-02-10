@@ -6,8 +6,8 @@ const DateClock = () => {
     const day = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"][new Date().getDay()]
 
     return (
-        <div className='flex justify-items-end w-6/12 mx-3.5 p-4'>
-            <p className="xl:w-6/12 md:w-7/12 font-bold text-right mx-0.5">{date} | {day} |</p>
+        <div className='flex justify-items-start w-full mx-3.5 p-4'>
+            <p className="w-4/12 font-bold text-left">{date} | {day} |</p>
             <Clock className='flex xl:w-6/12 md:w-5/12' format={'HH:mm:ss'} ticking={true} timezone={'Asia/Kuala_lumpur'} />
         </div>
     )
