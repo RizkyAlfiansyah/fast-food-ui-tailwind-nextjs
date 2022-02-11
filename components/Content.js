@@ -5,7 +5,6 @@ import NewOrderIcon from '../public/icons/newOrder.svg';
 import CustomerIcon from '../public/icons/customers.svg';
 import OnlineOrdersIcon from '../public/icons/onlineOrders.svg';
 import BurgerIcon from '../public/icons/burgers.svg';
-import DrinkIcon from '../public/icons/drinks.svg';
 import MealsIcon from '../public/icons/meals.svg';
 import SidesIcon from '../public/icons/sides.svg';
 import SandwhichesIcon from '../public/icons/sandwhiches.svg';
@@ -100,11 +99,11 @@ const Content = () => {
     ]
 
     return (
-        <div className='flex flex-col items-center w-2/13 h-1/13'>
+        <div className='flex flex-col items-center xl:w-6/12 lg:w-2/13 h-screen xl:mx-5'>
             <DateClock />
-            <div className='grid grid-cols-4 grid-rows-1 gap-4'>
+            <div className='grid grid-cols-4 grid-rows-1 lg:gap-4 xl:gap-10'>
                 {stats.map(stat => (
-                <div key={stat.id} className='w-28 h-28 bg-black-100 rounded-md text-white-100'>
+                <div key={stat.id} className='lg:w-28 lg:h-28 xl:w-40 bg-black-100 rounded-md text-white-100'>
                     <div className='m-2'>
                         <div className='flex my-4 invert'>
                            {stat.icon}
@@ -115,32 +114,34 @@ const Content = () => {
                 </div>
                 ))}
             </div>
-            <div className='flex flex-col w-full h-1/13 rounded-sm shadow-md mt-5 text-black-1 bg-white-100'>
+            <div className='w-full h-screen rounded-sm shadow-md mt-5 text-black-1 bg-white-100'>
                 <div className='mx-2 my-4'>
                     <span className='flex font-bold text-lg'>Ordered Items</span>
                 </div>
-                <table className="w-full text-xs my-5 mx-2">
-                    <thead className='text-left'>
-                        <tr>
-                        <th className='pb-6 '>Item</th>
-                        <th className='pb-6 '>Name</th>
-                        <th className='pb-6'>Orders</th>
-                        <th className='pb-6'>PPU</th>
-                        <th className='pb-6'>Revenue</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {reports.map(report => (
-                        <tr key={report.id}>
-                        <td className='pb-6'>{report.icon}</td>
-                        <td className='pb-6'>{report.name}r</td>
-                        <td className='font-bold pb-6'>{report.orders}</td>
-                        <td className='pb-6'>{report.ppu}</td>
-                        <td className='font-bold pb-6'>{report.revenue}</td>
-                        </tr>
-                        ))}
-                    </tbody>
+                <div className='mr-4'>
+                    <table className="w-full text-xs my-5 mx-2">
+                        <thead>
+                            <tr className='text-left'>
+                            <th className='pb-3'>Item</th>
+                            <th className='pb-3'>Name</th>
+                            <th className='pb-3'>Orders</th>
+                            <th className='pb-3'>PPU</th>
+                            <th className='pb-3 mr-5'>Revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {reports.map(report => (
+                            <tr key={report.id}>
+                            <td className='pb-4 border-b border-gray-200'>{report.icon}</td>
+                            <td className='pb-4 border-b border-gray-200'>{report.name}</td>
+                            <td className='font-bold pb-4 border-b border-gray-200'>{report.orders}</td>
+                            <td className='pb-4 border-b border-gray-200'>{report.ppu}</td>
+                            <td className='font-bold pb-4 border-b border-gray-200'>{report.revenue}</td>
+                            </tr>
+                            ))}
+                        </tbody>
                     </table>
+                </div>
             </div>
         </div>
     )
