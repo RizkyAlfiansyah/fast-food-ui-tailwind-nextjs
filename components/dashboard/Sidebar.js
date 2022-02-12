@@ -1,11 +1,11 @@
 import React from 'react';
-import IpadIcon from '../public/icons/ipadLogo.svg';
+import IpadIcon from '../../public/icons/ipadLogo.svg';
 import Image from 'next/image';
-import NewOrderIcon from '../public/icons/newOrder.svg';
-import DashboardIcon from '../public/icons/dashboard.svg';
-import OnlineOrdersIcon from '../public/icons/onlineOrders.svg';
-import SettingsIcon from '../public/icons/settings.svg';
-import LogoutIcon from '../public/icons/logout.svg';
+import NewOrderIcon from '../../public/icons/newOrder.svg';
+import DashboardIcon from '../../public/icons/dashboard.svg';
+import OnlineOrdersIcon from '../../public/icons/onlineOrders.svg';
+import SettingsIcon from '../../public/icons/settings.svg';
+import LogoutIcon from '../../public/icons/logout.svg';
 import {useRouter} from 'next/router';
 import Link from 'next/link';
 
@@ -60,7 +60,7 @@ const Sidebar = () => {
                     <Link href={side.path}>
                         <a>
                             {side.icon}
-                            <div className='text-xs text-center font-sf mt-1'>
+                            <div className='text-xs text-center mt-1'>
                             <span>{side.name}</span>
                             </div>
                         </a>

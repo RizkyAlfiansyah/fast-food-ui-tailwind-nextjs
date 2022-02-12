@@ -1,13 +1,13 @@
 import React from 'react'
-import SettingsIcon from '../public/icons/settings.svg';
+import SettingsIcon from '../../public/icons/settings.svg';
 import Link from 'next/link';
-import BurgerIcon from '../public/icons/burgers.svg';
-import MealsIcon from '../public/icons/meals.svg';
-import SidesIcon from '../public/icons/sides.svg';
-import SandwhichesIcon from '../public/icons/sandwhiches.svg';
-import DessertIcon from '../public/icons/dessert.svg';
+import BurgerIcon from '../../public/icons/burgers.svg';
+import MealsIcon from '../../public/icons/meals.svg';
+import SidesIcon from '../../public/icons/sides.svg';
+import SandwhichesIcon from '../../public/icons/sandwhiches.svg';
+import DessertIcon from '../../public/icons/dessert.svg';
 
-const OverallStats = () => {
+const NewOrder = () => {
     const menus = [
         {
             id : 1,
@@ -37,10 +37,10 @@ const OverallStats = () => {
     ]
 
     return (
-        <div className='flex flex-col shadow-md xl:w-4/12 lg:w-96 h-screen lg:mx-4 xl:mx-6 bg-white-100'>
+        <div className='flex flex-col shadow-md xl:w-4/12 lg:w-96 h-screen mx-auto bg-white-100'>
             <div className='w-auto flex mx-2 my-4'>
-                <span className='w-2/12 font-bold lg:mr-3 xl:-mr-2 text-xl'> Overall </span>  
-                <span className='w-9/12 text-xl'> Statistic </span>
+                <span className='w-2/12 font-bold lg:mr-3 xl:mr-0 text-xl'> Overall </span>  
+                <span className='w-9/12 text-xl lg:-ml-2 xl:-ml-9'> Statistic </span>
                 <SettingsIcon className='cursor-pointer hover:scale-150 w-1/12 m-auto'/>
             </div>
             <div className='w-auto flex justify-between p-2 text-center text-xs cursor-pointer'>
@@ -121,4 +121,4 @@ const OverallStats = () => {
     )
 }
 
-export default OverallStats;
+export default NewOrder;

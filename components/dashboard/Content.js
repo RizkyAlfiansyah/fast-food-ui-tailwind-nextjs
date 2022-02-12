@@ -1,14 +1,14 @@
 import React from 'react'
-import DateClock from "../components/DateClock";
-import DolarIcon from '../public/icons/dolar.svg';
-import NewOrderIcon from '../public/icons/newOrder.svg';
-import CustomerIcon from '../public/icons/customers.svg';
-import OnlineOrdersIcon from '../public/icons/onlineOrders.svg';
-import BurgerIcon from '../public/icons/burgers.svg';
-import MealsIcon from '../public/icons/meals.svg';
-import SidesIcon from '../public/icons/sides.svg';
-import SandwhichesIcon from '../public/icons/sandwhiches.svg';
-import DessertIcon from '../public/icons/dessert.svg';
+import DateClock from "./DateClock";
+import DolarIcon from '../../public/icons/dolar.svg';
+import NewOrderIcon from '../../public/icons/newOrder.svg';
+import CustomerIcon from '../../public/icons/customers.svg';
+import OnlineOrdersIcon from '../../public/icons/onlineOrders.svg';
+import BurgerIcon from '../../public/icons/burgers.svg';
+import MealsIcon from '../../public/icons/meals.svg';
+import SidesIcon from '../../public/icons/sides.svg';
+import SandwhichesIcon from '../../public/icons/sandwhiches.svg';
+import DessertIcon from '../../public/icons/dessert.svg';
 
 
 const Content = () => {

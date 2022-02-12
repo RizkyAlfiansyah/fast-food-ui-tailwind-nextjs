@@ -1,14 +1,14 @@
 import React from 'react'
-import Sidebar from '../components/Sidebar';
-import ArrowIcon from '../public/icons/arrow-left.svg';
+import OrderNav from '../components/order/OrderNav';
+import Menu from '../components/order/Menu';
+import NewOrder from '../components/order/NewOrder';
 
 const newOrder = () => {
     return (
         <div className="flex flex-row w-full h-screen bg-white-900">
-            <div>
-                {/* <ArrowIcon/> */}
-                <Sidebar/>
-            </div>
+                <OrderNav/>
+                <Menu/>
+                <NewOrder/>
         </div>
     )
 }

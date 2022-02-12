@@ -1,6 +1,6 @@
-import Sidebar from "../components/Sidebar";
-import Content from "../components/Content";
-import OverallStats from "../components/OverallStats";
+import Sidebar from "../components/dashboard/Sidebar";
+import Content from "../components/dashboard/Content";
+import OverallStats from "../components/dashboard/OverallStats";
 
 export default function Home() {
   return (
