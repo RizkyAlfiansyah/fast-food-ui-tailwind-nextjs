@@ -60,7 +60,7 @@ const OrderNav = () => {
             <div className='mx-auto'>
                 <IpadIcon/>
             </div>
-            <div className='overflow-y-auto mx-auto p-1.5'>
+            <div className='overflow-y-auto scrollbar-hide mx-auto p-1.5'>
                 {Menus.map(menu => (
                 <div key={menu.id} className='flex mx-auto p-1'>
                     <div className={`shadow-xl xl:shadow-lg rounded-md xl:my-3 sm:my-1.5 justify-center w-28 h-24 

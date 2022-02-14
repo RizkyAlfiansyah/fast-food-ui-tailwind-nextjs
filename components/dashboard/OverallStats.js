@@ -60,7 +60,7 @@ const OverallStats = () => {
                     </Link>
                 </div>
             </div>
-            <div className='w-auto overflow-auto mx-2 my-4'>
+            <div className='w-auto overflow-auto scrollbar-hide mx-2 my-4'>
                 {menus.map(menu => (
                 <div key={menu.id}>
                     <div className='flex w-auto mx-2 my-4'>

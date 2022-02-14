@@ -36,6 +36,7 @@ module.exports = {
   },
   plugins: [
     plugin(function({ addUtilities}) {
+      require('tailwind-scrollbar-hide')
       const utitilies = {
         '.bg-search': {
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z' stroke='%23B8B8B8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20.9999 21L16.6499 16.65' stroke='%23B8B8B8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");`,
@@ -44,6 +45,22 @@ module.exports = {
         }
       }
       addUtilities(utitilies)
+      addUtilities(
+        {
+        '.scrollbar-hide': {
+          /* IE and Edge */
+          '-ms-overflow-style': 'none',
+
+          /* Firefox */
+          'scrollbar-width': 'none',
+
+          /* Safari and Chrome */
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          }
+        }
+      }
+      )
     }),
   ],
 }
